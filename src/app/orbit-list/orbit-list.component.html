@@ -6,7 +6,7 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-    <tr *ngFor = "let satellite of satellites" [class.type.warning] = "satellite.isSpaceDebris()">
+    <tr *ngFor = "let satellite of satellites" [class.type.warning] = "satellite.isSpaceDebris()" [class.stripe] = "satellite.zebraStripes(satellites)">
         <td>{{satellite.name}}</td>
         <td [class.warning] = "satellite.isSpaceDebris()">{{satellite.type}}</td>
         <td>{{satellite.operational}}</td>
